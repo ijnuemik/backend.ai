@@ -44,7 +44,7 @@ msgid ""
 "customization due to the following reasons:"
 msgstr ""
 "AWS 및 기타 클라우드 제공 업체는 Autoscaling 그룹을 제공하여 VM의 CPU 사용률 또는 기타 리소스 지표에 따라 특정"
-" 제한 내에서 동일한 기본 이미지를 공유하는 VM 인스턴스 수를 제어합니다.이 모델을 Backend.AI에 사용할 수 있지만, "
+" 제한 내에서 동일한 기본 이미지를 공유하는 VM 인스턴스 수를 제어합니다. 이 모델을 Backend.AI에 사용할 수 있지만, "
 "다음과 같은 이유로 커스터마이징을 권장합니다."
 
 #: ../../install/configure-autoscaling.rst:16
@@ -55,6 +55,10 @@ msgid ""
 "many\" kernels are spwned. In the perspective of Backend.AI's scheduler, "
 "the latter is much more important."
 msgstr ""
+"Backend.AI의 커널은 그만큼 사용하지 않더라도 고정되고 독립된 양의 리소스가 할당됩니다. "
+"따라서 간단한 리소스 측정은 실행된 커널이 \"얼마나 바쁜지\"를 드러낼 수 있지만 "
+"\"얼마나 많은\" 커널이 생성되었는지는 알 수 없습니다. Backend.AI의 스케줄러의 관점에서 보면, "
+"후자는 훨씬 더 중요합니다."
 
 #: ../../install/configure-autoscaling.rst:17
 msgid ""
@@ -76,7 +80,7 @@ msgstr ""
 
 #: ../../install/demo-setup.rst:2
 msgid "One-line Demo Setup"
-msgstr ""
+msgstr "한 줄 데모 설치"
 
 #: ../../install/demo-setup-centos.rst:5 ../../install/demo-setup.rst:4
 msgid ""
@@ -90,7 +94,7 @@ msgstr ""
 #: ../../install/install-from-package.rst:7
 #: ../../install/install-from-source.rst:15
 msgid "Prerequisites"
-msgstr ""
+msgstr "전제 조건"
 
 #: ../../install/demo-setup-centos.rst:11 ../../install/demo-setup.rst:10
 msgid ""
@@ -111,19 +115,19 @@ msgstr ""
 
 #: ../../install/demo-setup-centos.rst:55 ../../install/demo-setup.rst:17
 msgid "This demo setup does *not* support GPUs."
-msgstr ""
+msgstr "이 데모 설치는 GPU를 지원하지 않습니다."
 
 #: ../../install/demo-setup-centos.rst:58 ../../install/demo-setup.rst:20
 msgid "All you have to do"
-msgstr ""
+msgstr "해야 하는 모든 것"
 
 #: ../../install/demo-setup.rst:23
 msgid "Clone the repository"
-msgstr ""
+msgstr "저장소 복제"
 
 #: ../../install/demo-setup.rst:24
 msgid "Check out the prerequisites above"
-msgstr ""
+msgstr "위의 전제 조건을 확인하십시오"
 
 #: ../../install/demo-setup-centos.rst:60 ../../install/demo-setup.rst:25
 msgid "``docker-compose up -d``"
@@ -135,15 +139,14 @@ msgstr ""
 
 #: ../../install/demo-setup-centos.rst:62 ../../install/demo-setup.rst:29
 msgid "Pull some kernel images to try out"
-msgstr ""
+msgstr "커널 이미지를 가져와 사용해 보십시오"
 
 #: ../../install/demo-setup-centos.rst:65 ../../install/demo-setup.rst:32
 msgid "Pulling kernel images"
-msgstr ""
+msgstr "커널 이미지 가져오기"
 
 #: ../../install/demo-setup-centos.rst:67 ../../install/demo-setup.rst:34
 msgid "Pull the images on your host Docker daemon like:"
-msgstr ""
 
 #: ../../install/demo-setup-centos.rst:75 ../../install/demo-setup.rst:42
 msgid ""
@@ -156,13 +159,15 @@ msgstr ""
 
 #: ../../install/demo-setup-centos.rst:78 ../../install/demo-setup.rst:45
 msgid "Using Clients"
-msgstr ""
+msgstr "클라이언트 사용"
 
 #: ../../install/demo-setup-centos.rst:80 ../../install/demo-setup.rst:47
 msgid ""
 "To access this local cluster, set the following configurations to your "
-"favoriate Backend.AI client:"
+"favorite Backend.AI client:"
 msgstr ""
+"로컬 클러스터에 접근하기 위해서는, 다음 구성을 "
+"즐겨찾는 Backend.AI 클라이언트로 설정하십시오: "
 
 #: ../../install/demo-setup-centos.rst:88 ../../install/demo-setup.rst:55
 msgid ""
@@ -174,15 +179,17 @@ msgstr ""
 msgid ""
 "WARNING: This demo configuration is highly insecure. DO NOT USE in "
 "production!"
-msgstr ""
+msgstr "경고: 이 데모 설정은 매우 안전하지 않습니다. 프로덕션에서 "
+"사용하지 마십시오!"
+
 
 #: ../../install/demo-setup-centos.rst:105 ../../install/demo-setup.rst:72
 msgid "FAQ"
-msgstr ""
+msgstr "자주하는 질문"
 
 #: ../../install/demo-setup-centos.rst:108 ../../install/demo-setup.rst:75
 msgid "When launching a kernel, it says \"Service Unavailable\"!"
-msgstr ""
+msgstr "커널을 실행할 때, \"Service Unavilable\"라고 표시됩니다!"
 
 #: ../../install/demo-setup-centos.rst:110 ../../install/demo-setup.rst:77
 msgid ""
@@ -190,26 +197,33 @@ msgid ""
 "daemon may have a too small amount of resources. For example, TensorFlow "
 "images require 8 GiB or more RAM for your Docker daemon."
 msgstr ""
+"각 이미지마다 기본 리소스 요구사항이 다르며 당신의 Docker 데몬의 리소스가 "
+"너무 적을 수 있습니다. 예를 들어, TensorFlow 이미지는 당신의 Docker 데몬에 "
+"8 GiB 이상의 RAM을 필요로 합니다."
 
 #: ../../install/demo-setup-centos.rst:111 ../../install/demo-setup.rst:78
 msgid ""
 "Or, you might have launched 30 sessions already, which is the default "
 "limit for this demo setup."
 msgstr ""
+"또는, 이미 30개의 세션을 시작했을 수 있으며, 이것은 이 데모 설정의 기본 제한입니다."
 
 #: ../../install/demo-setup-centos.rst:113 ../../install/demo-setup.rst:80
 msgid "What does the \"dense\" tag mean in the TensorFlow kernel images?"
 msgstr ""
+"TensorFlow 커널 이미지에서 \"dense\" 태그는 무엇을 의미하나요?"
 
 #: ../../install/demo-setup-centos.rst:115 ../../install/demo-setup.rst:82
 msgid ""
 "Images with \"dense\" tags are optimized for shared multi-tenancy "
 "environments. There is no difference in functionalities."
 msgstr ""
+"\"dense\" 태그가 있는 이미지는 공유 멀티 테넌시(multi-tenancy) 환경에 최적화되어 "
+"있습니다. 기능에는 차이가 없습니다."
 
 #: ../../install/demo-setup-centos.rst:3
 msgid "Demo Setup"
-msgstr ""
+msgstr "데모 설치"
 
 #: ../../install/demo-setup-centos.rst:14
 msgid "intstall docker-ce at Centos 7.5"
